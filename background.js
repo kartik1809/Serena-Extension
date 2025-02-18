@@ -230,7 +230,7 @@ chrome.tabs.onActivated.addListener((e) => {
 });
 
 // Initialization
-dcl("Zenith - background.js loaded");
+dcl("Serena - background.js loaded");
 loadDateStart(dates.today);
 loadSecondsAlltime();
 loadIdleTime();
@@ -271,20 +271,18 @@ window.setInterval(() => {
 // Handle extension installation and update
 chrome.runtime.onInstalled.addListener(({ reason: e }) => {
   e === chrome.runtime.OnInstalledReason.INSTALL
-    ? chrome.tabs.create({ url: INSTALL_URL })
+    ? chrome.tabs.create({ url: 'https://github.com/kartik1809/Serena' })
     : e === chrome.runtime.OnInstalledReason.UPDATE &&
       storageLocal.load("app-version", null, (e) => {
-        (e && e == APP_VERSION) ||
-          (APP_VERSION_WITH_UPDATE_URL.includes(APP_VERSION) &&
-            chrome.tabs.create({ url: UPDATE_URL }));
+        (e && e == '1.2.0') ||
+          ('1.2.0'.includes('1.2.0') &&
+            chrome.tabs.create({ url: 'https://github.com/kartik1809/Serena' }));
       }),
-    storageLocal.save("app-version", APP_VERSION);
+    storageLocal.save("app-version", '1.2.0');
 });
 
-// Handle uninstall URL
-chrome.runtime.setUninstallURL(UNINSTALL_URL);
 
-// Handle messages from content script
+
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.status === "complete" && tab.url) {
       setTimeout(() => {

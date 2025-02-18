@@ -1,20 +1,20 @@
 
-# Zenith
+# Serena
 
-**Zenith** is a productivity-enhancing browser extension that assists users by analyzing their browsing patterns, providing personalized recommendations, and offering detailed metrics. Designed to boost your productivity and improve the overall efficiency of your web interactions.
+**Serena** is a productivity-enhancing browser extension that assists users by analyzing their browsing patterns, providing personalized recommendations, and offering detailed metrics. Designed to boost your productivity and improve the overall efficiency of your web interactions.
 
 
 ## Installation
 
 1. **Clone or Download** the extension from the repository:
     ```bash
-    git clone https://github.com/kartik1809/Zenith_Extension.git
+    git clone https://github.com/kartik1809/Serena_Extension.git
     ```
 2. **Load Extension** into your browser:
     - Open your browser (Chrome/Firefox/Edge).
     - Navigate to the extensions page (`chrome://extensions` or equivalent).
     - Enable **Developer mode**.
-    - Click on **Load unpacked** and select the `Zenith` folder.
+    - Click on **Load unpacked** and select the `Serena` folder.
 
 ## Usage
 
@@ -37,7 +37,7 @@ Once installed:
 
 ## API Integration
 
-Zenith integrates with the following APIs:
+Serena integrates with the following APIs:
 - **Recommendation Engine**: Fetch personalized user recommendations based on browsing history.
 - **Metrics API**: Track real-time metrics of user activity and display them in an easy-to-understand format.
 
